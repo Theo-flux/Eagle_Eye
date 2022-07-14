@@ -1,7 +1,9 @@
 import React from "react";
-import { Title } from "@mantine/core";
+import ProjectsGrid from "../components/Home/ProjectsGrid";
 const HomePage = () => {
-  return <Title>Home Page</Title>;
+  return <div>
+    <ProjectsGrid />
+  </div>;
 };
 
 export default HomePage;

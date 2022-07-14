@@ -3,12 +3,12 @@ import {
     MediaQuery,
     Burger,
     useMantineTheme,
-    Title,
+    Image,
     Group,
 } from "@mantine/core";
 import { useStore } from "../../store";
 import AccountButton from "../AccountButton";
-
+import Eagle from "../../img/eagle.jpeg";
 const Heading = () => {
     const theme = useMantineTheme();
     const toggleOpen = useStore((state) => state.toggleOpen);
@@ -34,7 +34,9 @@ const Heading = () => {
                         />
                     </MediaQuery>
 
-                    <Title>Eagle Eye 🦅</Title>
+                    <div style={{ maxWidth: "60px" }}>
+                        <Image radius="50%" src={Eagle} alt="🦅" />
+                    </div>
                 </Group>
 
                 <AccountButton />
