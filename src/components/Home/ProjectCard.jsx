@@ -1,8 +1,8 @@
 import React from 'react'
-import { createStyles, Card, Text, Group, ActionIcon, Title } from '@mantine/core';
+import { createStyles, Card, Text, Group, ActionIcon, Title, ThemeIcon } from '@mantine/core';
 import dayjs from "dayjs";
 import relativeTime from "dayjs/plugin/relativeTime"
-import { Heart } from 'tabler-icons-react';
+import { Star } from 'tabler-icons-react';
 dayjs.extend(relativeTime);
 const useStyles = createStyles((theme) => ({
     card: {
@@ -37,24 +37,29 @@ const ProjectCard = ({ title, address, reviewsNumber, postingDate }) => {
     return (
         <Card withBorder p={40} className={classes.card}>
             <Card.Section p="sm">
-                <Title order={3}>{title}</Title>
-            </Card.Section>
-            <Group position='apart' mt="xl">
-                <Text size="sm" weight={700} className={classes.stats}>
-                    {truncate(address)}
-                </Text>
-                {reviewsNumber && (<Text size="sm" weight={700} className={classes.stats}>
-                    {reviewsNumber} Reviews
-                </Text>)}
-            </Group>
+
+
+                <Group position='apart' >
+                    <Title order={3}>{title}</Title>
+                    <Text size="sm" weight={400} className={classes.stats}>
+                        {truncate(address)}
+                    </Text>
+
+                </Group></Card.Section>
             <Card.Section className={classes.foter}>
                 <Group position='apart' mt="lg" mb="xs" mx="xs">
                     <Text>
                         {dayjs(postingDate).fromNow()}
                     </Text>
-                    <ActionIcon variant="transparent" radius="md" size={36}>
-                        <Heart size={18} className={classes.like} />
-                    </ActionIcon>
+                    {reviewsNumber && (<div>
+                        <Group spacing="xs" position="center">
+                            <Text size="md" >4.5</Text>
+                            <ThemeIcon variant="light" sx={{ backgroundColor: "transparent", marginBottom: "1px", marginLeft: "-10px" }} radius="xl" size="sm" color="gray"><Star /></ThemeIcon>
+                        </Group>
+                        <Text size="sm" weight={700} className={classes.stats}>
+                            {reviewsNumber} Reviews
+                        </Text>
+                    </div>)}
                 </Group>
             </Card.Section>
         </Card>
