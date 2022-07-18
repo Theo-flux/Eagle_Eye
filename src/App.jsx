@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Sidebar from "./components/Layout/Sidebar";
 import Heading from "./components/Layout/Heading";
 import HomePage from './pages/Home';
+import ReviewPage from "./pages/Review";
 function App() {
   const theme = useMantineTheme();
   return (
@@ -24,6 +25,7 @@ function App() {
         fixed>
         <Routes>
           <Route path="/" element={<HomePage />} />
+          <Route path="/review" element={<ReviewPage />} />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </AppShell>
