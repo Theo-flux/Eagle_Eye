@@ -125,7 +125,7 @@ export function ReviewCard() {
                                 data={['DeFi Lender', 'NFT Marketplace', 'Unknown DAO', 'someProject']}
                                 placeholder="Type of the Review"
                                 defaultValue=""
-                                label="Select the type of review you're gonna make"
+                                label="Select the type of review you're making"
                                 required
                             />
                         </SimpleGrid>
