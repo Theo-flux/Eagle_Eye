@@ -1,8 +1,10 @@
 import React from 'react'
+import { useNavigate } from "react-router-dom"
 import { Button } from '@mantine/core'
 import { showNotification, updateNotification } from '@mantine/notifications';
 import { useStore } from '../store';
 const AccountButton = () => {
+    let navigate = useNavigate();
     const setAddress = useStore((state) => state.setAddress);
     const address = useStore((state) => state.address);
     function truncate(text) {
@@ -41,7 +43,7 @@ const AccountButton = () => {
     }
     if (address.length >= 1)
         return (
-            <Button color="cyan">
+            <Button color="cyan" onClick={() => navigate("/user")}>
                 {truncate(address)}
             </Button>
         )
