@@ -1,0 +1,56 @@
+{
+  "address": "0x5Eb699132288A97C1195d2B4142135A97cA2076b",
+  "abi": [],
+  "transactionHash": "0x786e788d2a69f1303b7f76ef3ccc40b16d238642fbdddf4822766c69d9ff320a",
+  "receipt": {
+    "to": null,
+    "from": "0xec4A43a672B4aD21f1aB396d3Ce904C3145A1Ac4",
+    "contractAddress": "0x5Eb699132288A97C1195d2B4142135A97cA2076b",
+    "transactionIndex": 0,
+    "gasUsed": "67066",
+    "logsBloom": "0x00000000000000010000000000000000000000000000000000000000000000000000000000000040000000000000000000008000000000000000000000000000000000000000000000000000000000800000000000000000000100000000000000000000000000000000000000000000000010000000000080000000000000000000000000000000000000000000000000004000000000000000000000000000200000000000000000000000000000000000000000000000000000000000004000000000000000000001000000000000000000000000000000100000000000000000000000000000000000000000000000020002000000000000000000100000",
+    "blockHash": "0x4cac1b639e0b681f600b1b74973ca2e7b71180f572636a579572b464fa60dad8",
+    "transactionHash": "0x786e788d2a69f1303b7f76ef3ccc40b16d238642fbdddf4822766c69d9ff320a",
+    "logs": [
+      {
+        "transactionIndex": 0,
+        "blockNumber": 9833130,
+        "transactionHash": "0x786e788d2a69f1303b7f76ef3ccc40b16d238642fbdddf4822766c69d9ff320a",
+        "address": "0x0000000000000000000000000000000000001010",
+        "topics": [
+          "0x4dfe1bbbcf077ddc3e01291eea2d5c70c2b422b415d95645b9adcfd678cb1d63",
+          "0x0000000000000000000000000000000000000000000000000000000000001010",
+          "0x000000000000000000000000ec4a43a672b4ad21f1ab396d3ce904c3145a1ac4",
+          "0x000000000000000000000000f4c2f1d772488cc6d3ec3c703b9710fa2c0e227e"
+        ],
+        "data": "0x0000000000000000000000000000000000000000000000011737e3802fe780000000000000000000000000000000000000000000000844ac3eff125ff0dcc000000000000000000000000000000000000000000000f8abf00e938cbb0dc25db80000000000000000000000000000000000000000000844ab27c72edfc0f54000000000000000000000000000000000000000000000f8abf125cb703b3da9ddb8",
+        "logIndex": 0,
+        "blockHash": "0x4cac1b639e0b681f600b1b74973ca2e7b71180f572636a579572b464fa60dad8"
+      }
+    ],
+    "blockNumber": 9833130,
+    "cumulativeGasUsed": "67066",
+    "status": 1,
+    "byzantium": true
+  },
+  "args": [],
+  "numDeployments": 1,
+  "solcInputHash": "444ebacaefba16d6763c28495fd15fe1",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.8+commit.dddeac2f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"Contracts/Treasury.sol\":\"Treasury\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\",\"useLiteralContent\":true},\"optimizer\":{\"enabled\":true,\"runs\":500},\"remappings\":[]},\"sources\":{\"Contracts/Treasury.sol\":{\"content\":\"//SPDX-License-Identifier: MIT\\npragma solidity ^0.8.0;\\n\\ncontract Treasury {\\n    //This contract is the community bank\\n    //The DAO controls what it would be used for \\n\\n}\\n\",\"keccak256\":\"0x584d39185b7c59dea4c83bb44fe5359bb5d8bacf8233b96bda5b59464270e233\",\"license\":\"MIT\"}},\"version\":1}",
+  "bytecode": "0x6080604052348015600f57600080fd5b50603f80601d6000396000f3fe6080604052600080fdfea26469706673582212204502534c997ed1145622fcad4cfd0bb6254e8cf3a31b76ceee305ad12afd264664736f6c63430008080033",
+  "deployedBytecode": "0x6080604052600080fdfea26469706673582212204502534c997ed1145622fcad4cfd0bb6254e8cf3a31b76ceee305ad12afd264664736f6c63430008080033",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  },
+  "storageLayout": {
+    "storage": [],
+    "types": null
+  }
+}
