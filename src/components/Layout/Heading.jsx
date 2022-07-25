@@ -5,7 +5,9 @@ import {
     useMantineTheme,
     Image,
     Group,
+    TextInput, ActionIcon
 } from "@mantine/core";
+import { Search, ArrowRight, ArrowLeft } from 'tabler-icons-react';
 import { useStore } from "../../store";
 import AccountButton from "../AccountButton";
 import Eagle from "../../img/eagle.jpeg";
@@ -38,8 +40,22 @@ const Heading = () => {
                         <Image radius="50%" src={Eagle} alt="🦅" />
                     </div>
                 </Group>
-
-                <AccountButton />
+                <Group>
+                    <MediaQuery smallerThan="sm" styles={{ display: "none" }}>
+                        <TextInput
+                            radius="xl"
+                            size="md"
+                            rightSection={
+                                <ActionIcon size={32} radius="xl" color="teal-dark" variant="filled">
+                                    <Search size={18} />
+                                </ActionIcon>
+                            }
+                            placeholder="Top Search"
+                            rightSectionWidth={42}
+                        />
+                    </MediaQuery>
+                    <AccountButton />
+                </Group>
             </div>
         </Header>
     );

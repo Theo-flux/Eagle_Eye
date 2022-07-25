@@ -1,6 +1,7 @@
-import { createStyles, Navbar, ScrollArea } from "@mantine/core";
+import { createStyles, TextInput, ActionIcon, useMantineTheme, Navbar, MediaQuery, ScrollArea } from "@mantine/core";
 import { Link, useLocation } from "react-router-dom";
 import { useStore } from "../../store";
+import { Search, ArrowRight, ArrowLeft } from 'tabler-icons-react';
 import links from "../../utils/links";
 
 const useStyles = createStyles((theme, _params, getRef) => {
@@ -101,6 +102,7 @@ const useStyles = createStyles((theme, _params, getRef) => {
 const Sidebar = () => {
     const { classes, cx } = useStyles();
     const location = useLocation();
+    const theme = useMantineTheme();
     const opened = useStore((state) => state.open);
     const address = useStore((state) => state.address);
     const pages = links.filter((x) => x.label !== "Profile" || address !== "").map((item) => (
@@ -123,7 +125,24 @@ const Sidebar = () => {
             width={{ sm: 200, lg: 300 }}
         >
             <Navbar.Section grow className={classes.links} component={ScrollArea}>
-                <div className={classes.linksInner}>{pages}</div>
+                <div className={classes.linksInner}>
+                    {pages}
+                    <MediaQuery largerThan="sm" styles={{ display: "none" }}>
+                        <TextInput
+                            mx="md"
+                            my="xl"
+                            radius="xl"
+                            size="md"
+                            rightSection={
+                                <ActionIcon size={32} radius="xl" color="teal-dark" variant="filled">
+                                    <Search size={18} />
+                                </ActionIcon>
+                            }
+                            placeholder="Top Search"
+                            rightSectionWidth={42}
+                        />
+                    </MediaQuery>
+                </div>
             </Navbar.Section>
         </Navbar>
     );
