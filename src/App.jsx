@@ -6,6 +6,7 @@ import Heading from "./components/Layout/Heading";
 import HomePage from './pages/Home';
 import UserPage from "./pages/User";
 import ReviewPage from "./pages/Review";
+import AppReviews from "./pages/AppReviews";
 function App() {
   const theme = useMantineTheme();
   return (
@@ -26,8 +27,9 @@ function App() {
         fixed>
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/review" element={<ReviewPage />} />
           <Route path="/user" element={<UserPage />} />
+          <Route path="/review" element={<ReviewPage />} />
+          <Route path="/app/:appId" element={<AppReviews />} />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </AppShell>

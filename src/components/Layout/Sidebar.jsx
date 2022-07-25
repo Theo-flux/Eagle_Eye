@@ -102,7 +102,8 @@ const Sidebar = () => {
     const { classes, cx } = useStyles();
     const location = useLocation();
     const opened = useStore((state) => state.open);
-    const pages = links.map((item) => (
+    const address = useStore((state) => state.address);
+    const pages = links.filter((x) => x.label !== "Profile" || address !== "").map((item) => (
         <Link
             className={cx(classes.link, {
                 [classes.linkActive]: item.link === location.pathname,

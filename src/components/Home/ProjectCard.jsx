@@ -37,14 +37,11 @@ const ProjectCard = ({ title, address, reviewsNumber, postingDate }) => {
     return (
         <Card withBorder p={40} className={classes.card}>
             <Card.Section p="sm">
-
-
-                <Group position='apart' >
+                <Group position='apart' mb="lg">
                     <Title order={3}>{title}</Title>
                     <Text size="sm" weight={400} className={classes.stats}>
                         {truncate(address)}
                     </Text>
-
                 </Group></Card.Section>
             <Card.Section className={classes.footer}>
 

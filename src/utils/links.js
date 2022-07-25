@@ -1,7 +1,8 @@
-import { Eye, Home } from "tabler-icons-react";
+import { ReportMoney, Home, UserCircle } from "tabler-icons-react";
 const links = [
   { label: "Home", icon: Home, link: "/" },
-  { label: "Review", icon: Eye, link: "/review" },
+  { label: "Profile", icon: UserCircle, link: "/user" },
+  { label: "Earn", icon: ReportMoney, link: "/review" },
 ];
 
 export default links;
