@@ -11,4 +11,13 @@
   
   
 # Quickstart
+  1. Git clone https://github.com/stevegee1/Eagle_Eye.git
   
+  2. yarn add
+  
+  3. yarn run dev
+  
+  4. Website will be accessible on your local host
+  
+  
+  # This is the official repo of Eagle_Eye. Under Construction
