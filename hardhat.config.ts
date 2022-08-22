@@ -36,6 +36,12 @@ const config : HardhatUserConfig= {
        allowUnlimitedContractSize:true,
        
     },
+     matic: {
+      url: "https://matic-mumbai.chainstacklabs.com",
+      accounts: [PRIVATE_KEY],
+      chainId: 80001
+    
+    },
     localhost:{
       chainId:31337,
       allowUnlimitedContractSize:true
