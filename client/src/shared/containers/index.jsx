@@ -13,11 +13,7 @@ export const Div = ({ children, className }) => {
 };
 
 export const Aside = ({ children, className }) => {
-  return (
-    <aside className={`w-[95%] mx-auto max-w-7xl ${className}`}>
-      {children}
-    </aside>
-  );
+  return <aside className={`w-[95%] mx-auto ${className}`}>{children}</aside>;
 };
 
 export const Nav = ({ children, className }) => {

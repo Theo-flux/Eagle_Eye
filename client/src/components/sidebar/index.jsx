@@ -12,20 +12,20 @@ const sidebar_items = [
     id: '2',
     unactiveIcon: 'ri-wallet-line',
     activeIcon: 'ri-wallet-fill',
-    item: 'Report',
+    item: 'Report & Earn',
   },
 
   {
     id: '3',
     unactiveIcon: 'ri-wallet-line',
     activeIcon: 'ri-wallet-fill',
-    item: 'Report',
+    item: 'Vote',
   },
 ];
 
 function Sidebar() {
   return (
-    <div className="sticky top-0 bg-white w-[300px] h-[100vh]">
+    <div className="fixed md:sticky md:top-0 bg-white w-[350px] h-[100vh]">
       <div className={`py-12`}>
         {sidebar_items.map((sidebar_item, index) => {
           const { unactiveIcon, activeIcon, item } = sidebar_item;
