@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from 'next/link';
 
 export function LinkButton({ content, href }) {
   return (
@@ -6,8 +6,7 @@ export function LinkButton({ content, href }) {
       <a
         className={`
                 inline-block transition-all duration-700 ease-in-out mt-4 mb-8 py-4 px-10 text-xl
-                leading-8 text-white font-heading font-medium tracking-tighter text-center bg-violet-500
-                focus:ring-2 focus:ring-violet-500 focus:ring-opacity-50 hover:bg-violet-600 rounded-xl
+                leading-8 text-white font-heading font-medium tracking-tighter text-center bg-west rounded
             `}
         href="#"
       >
@@ -17,16 +16,31 @@ export function LinkButton({ content, href }) {
   );
 }
 
-export function AnchorButton({className, content, href }) {
+export function AnchorButton({ className, content, href }) {
   return (
     <a
       className={`
                 inline-block transition-all duration-700 ease-in-out mt-4
                 mb-8 py-4 px-10 text-xl leading-8 text-white font-heading
-                font-medium tracking-tighter text-center bg-violet-500 focus:ring-2
-                focus:ring-violet-500 focus:ring-opacity-50 hover:bg-violet-600 rounded-xl
+                font-medium tracking-tighter text-center bg-west rounded
                 ${className}
             `}
+      href={`${href}`}
+    >
+      {content}
+    </a>
+  );
+}
+
+export function Connect({ className, content, href }) {
+  return (
+    <a
+      className={`
+        inline-block transition-all duration-700 ease-in-out px-4 py-2 text-sm
+        md:text-base md:px-8 md:py-2 text-white font-heading 
+        font-medium tracking-tighter text-center bg-west rounded-full
+        ${className}
+      `}
       href={`${href}`}
     >
       {content}

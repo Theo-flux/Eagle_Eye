@@ -1,22 +1,29 @@
 import Head from 'next/head';
-import React from 'react'
+import { Navbar, Sidebar } from '../components';
 
-function Layout({children}) {
+function Layout({ children }) {
   return (
     <div>
       <Head>
-        <title>slashit</title>
-        <meta charSet="utf-8"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
-        <meta name="author" content=""/>
-        <meta name="description" content="Slashit is an online ecommerce site" />
+        <title>Eagle eye</title>
+        <meta charSet="utf-8" />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+        <meta name="author" content="" />
+        <meta name="description" content="Eagle eye" />
       </Head>
 
       <main className="antialiased bg-body text-body font-body">
-        {children}
+        <Navbar />
+        <div className="flex">
+          <Sidebar />
+          {children}
+        </div>
       </main>
     </div>
-  )
+  );
 }
 
 export default Layout;
