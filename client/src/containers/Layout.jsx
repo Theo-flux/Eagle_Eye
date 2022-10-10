@@ -1,7 +1,14 @@
+import { useState } from 'react';
 import Head from 'next/head';
 import { Navbar, Sidebar } from '../components';
 
 function Layout({ children }) {
+  const [openSidebar, setOpenSidebar] = useState(false);
+
+  function handleOpenSidebar() {
+    setOpenSidebar(!openSidebar);
+  }
+
   return (
     <div>
       <Head>
@@ -16,9 +23,9 @@ function Layout({ children }) {
       </Head>
 
       <main className="relative">
-        <Navbar />
+        <Navbar handleOpenSidebar={handleOpenSidebar} />
         <div className="relative flex">
-          <Sidebar />
+          <Sidebar openSidebar={openSidebar} />
           {children}
         </div>
       </main>

@@ -20,16 +20,22 @@ const sidebar_items = [
   },
 ];
 
-function Sidebar() {
+function Sidebar({ openSidebar }) {
   return (
-    <div className="fixed md:sticky md:top-0 bg-white md:w-[350px] h-[100vh]">
+    <div
+      className={`
+        fixed ${openSidebar ? 'left-0' : 'left-[-500px]'}
+        md:sticky md:top-0 bg-white md:w-[350px]
+        h-[100vh] transition-all duration-300 ease-in-out
+      `}
+    >
       <div className={`py-12`}>
         {sidebar_items.map((sidebar_item, index) => {
           const { unactiveIcon, item } = sidebar_item;
           return (
             <span
               key={index}
-              className={`transition-all duration-300 ease-in-out cursor-pointer group hover:bg-resblue py-3 px-12 mb-4 flex items-center`}
+              className={`transition-all duration-300 ease-in-out cursor-pointer group hover:bg-resblue py-3 px-6 lg:px-12 mb-4 flex items-center`}
             >
               <i
                 className={`transition-all duration-300 ease-in-out text-xl mr-4 group-hover:text-white ${unactiveIcon}`}
