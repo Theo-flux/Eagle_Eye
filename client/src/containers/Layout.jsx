@@ -15,9 +15,9 @@ function Layout({ children }) {
         <meta name="description" content="Eagle eye" />
       </Head>
 
-      <main className="antialiased bg-body text-body font-body">
+      <main className="">
         <Navbar />
-        <div className="flex">
+        <div className="">
           <Sidebar />
           {children}
         </div>
