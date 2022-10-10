@@ -25,8 +25,8 @@ const sidebar_items = [
 
 function Sidebar() {
   return (
-    <div className="bg-white fixed w-fit h-[100vh]">
-      <div className={`py-24`}>
+    <div className="sticky top-0 bg-white w-[300px] h-[100vh]">
+      <div className={`py-12`}>
         {sidebar_items.map((sidebar_item, index) => {
           const { unactiveIcon, activeIcon, item } = sidebar_item;
           return (

@@ -3,9 +3,7 @@ import Search from '../search';
 
 function Navbar() {
   return (
-    <Section
-      className={`fixed z-50 bg-white w-[100%] border-b-[1px] border-[#00000010]`}
-    >
+    <Section className={`bg-white w-[100%] border-b-[1px] border-[#00000010]`}>
       <Nav>
         <div className={`py-2 flex justify-between items-center`}>
           <Logo />

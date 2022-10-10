@@ -1,9 +1,11 @@
-import { Section, Div } from '../../shared';
+import { Section, Aside } from '../../shared';
 
 function HomeContainer() {
   return (
-    <Section className={`h-[500vh] w-[100%] bg-laurel`}>
-      <Div>Home</Div>
+    <Section className={`h-[500vh] overflow-hidden w-[100%] bg-laurel`}>
+      <Aside>
+        <div className="text-white">Home</div>
+      </Aside>
     </Section>
   );
 }
