@@ -1,12 +1,17 @@
 import { useState } from 'react';
 import Head from 'next/head';
-import { Navbar, Sidebar } from '../components';
+import { ConnectWalletModal, Navbar, Sidebar } from '../components';
 
 function Layout({ children }) {
   const [openSidebar, setOpenSidebar] = useState(false);
+  const [openModal, setOpenModal] = useState(false);
 
   function handleOpenSidebar() {
     setOpenSidebar(!openSidebar);
+  }
+
+  function handleOpenModal() {
+    setOpenModal(!openModal);
   }
 
   return (
@@ -23,11 +28,15 @@ function Layout({ children }) {
       </Head>
 
       <main className="relative">
-        <Navbar handleOpenSidebar={handleOpenSidebar} />
+        <Navbar
+          handleOpenSidebar={handleOpenSidebar}
+          handleOpenModal={handleOpenModal}
+        />
         <div className="relative flex">
           <Sidebar openSidebar={openSidebar} />
           {children}
         </div>
+        {openModal && <ConnectWalletModal handleOpenModal={handleOpenModal} />}
       </main>
     </div>
   );

@@ -25,7 +25,7 @@ function Sidebar({ openSidebar }) {
     <div
       className={`
         fixed ${openSidebar ? 'left-0' : 'left-[-500px]'}
-        md:sticky z-50 md:top-0 bg-white md:w-[350px] shadow
+        md:sticky z-40 md:top-0 bg-white md:w-[350px] shadow
         h-[100vh] transition-all duration-300 ease-in-out
       `}
     >

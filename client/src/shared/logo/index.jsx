@@ -14,5 +14,14 @@ export function Logo() {
 }
 
 export function LogoType() {
-  return <div>index</div>;
+  return (
+    <div className="">
+      <Image
+        src={'/images/ee_logo_type.svg'}
+        width={100}
+        height={30}
+        alt="eagle icon"
+      />
+    </div>
+  );
 }

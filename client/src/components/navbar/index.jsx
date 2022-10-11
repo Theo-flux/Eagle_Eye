@@ -1,7 +1,7 @@
 import { Logo, Section, Nav, Connect } from '../../shared';
 import Search from '../search';
 
-function Navbar({ handleOpenSidebar }) {
+function Navbar({ handleOpenSidebar, handleOpenModal }) {
   return (
     <Section
       className={`sticky top-0 md:static w-full z-40 bg-white w-[100%] border-b-[1px] border-[#00000010]`}
@@ -14,7 +14,7 @@ function Navbar({ handleOpenSidebar }) {
             <div className={`hidden md:block mr-8`}>
               <Search />
             </div>
-            <Connect content={'Connect'} />
+            <Connect onClick={() => handleOpenModal()} content={'Connect'} />
             <i
               onClick={() => handleOpenSidebar()}
               className={`md:hidden ml-8 text-2xl text-black ri-menu-add-line`}
