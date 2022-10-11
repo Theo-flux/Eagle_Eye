@@ -4,7 +4,7 @@ import Search from '../search';
 function Navbar({ handleOpenSidebar }) {
   return (
     <Section
-      className={`sticky top-0 w-full z-40 bg-white w-[100%] border-b-[1px] border-[#00000010]`}
+      className={`sticky top-0 md:static w-full z-40 bg-white w-[100%] border-b-[1px] border-[#00000010]`}
     >
       <Nav>
         <div className={`py-2 flex justify-between items-center`}>
