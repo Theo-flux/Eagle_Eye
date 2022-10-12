@@ -36,7 +36,11 @@ function Layout({ children }) {
           <Sidebar openSidebar={openSidebar} />
           {children}
         </div>
-        {openModal && <ConnectWalletModal handleOpenModal={handleOpenModal} />}
+        <ConnectWalletModal
+          className={`z-50`}
+          handleOpenModal={handleOpenModal}
+          openModal={openModal}
+        />
       </main>
     </div>
   );

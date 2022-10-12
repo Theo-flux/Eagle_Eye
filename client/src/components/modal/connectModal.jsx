@@ -3,12 +3,17 @@ import { Section, Div, Logo, LogoType } from '../../shared';
 function ConnectWalletModal({ handleOpenModal, openModal }) {
   return (
     <Section
-      className={`fixed z-50 top-0 left-0 w-[100%] h-screen bg-black bg-opacity-20 flex justify-center items-center`}
+      className={`fixed z-50 top-0 left-0 w-[100%] h-screen bg-black bg-opacity-20 
+        flex justify-center items-center transition-all duration-500 ${
+          openModal
+            ? 'translate-y-0 opacity-100 visible'
+            : 'translate-y-12 opacity-0 invisible'
+        } transition-all duration-500`}
     >
       <div
         className={`mx-auto w-[90%] max-w-[500px] ${
-          openModal ? '-translate-y-6' : 'translate-y-0'
-        } transition-all duration-500`}
+          openModal ? 'translate-y-0 opacity-100' : '-translate-y-6 opacity-0'
+        } transition-all duration-500 delay-300`}
       >
         <div className="flex justify-center items-center mb-4">
           <i
