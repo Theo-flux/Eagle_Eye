@@ -7,7 +7,7 @@
   a community-based platform that prides in a safer space for veteran , new users and investors of the 
   space while fostering wide-stream adoption, decentralized policing and passive earning. 
   Eagle Eye is a web3 platform with a feel and environment of web2 such that users transitioning from web2 
-  to web3 users can already feel at home!
+  to web3 can already feel at home!
   
   
 
