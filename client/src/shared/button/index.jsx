@@ -21,8 +21,7 @@ export function AnchorButton({ className, content, href }) {
     <a
       className={`
                 inline-block transition-all duration-700 ease-in-out mt-4
-                mb-8 py-4 px-10 text-xl leading-8 text-white font-heading
-                font-medium tracking-tighter text-center bg-west rounded
+                mb-8 py-1 text-sm text-white text-center rounded w-[100%]
                 ${className}
             `}
       href={`${href}`}
