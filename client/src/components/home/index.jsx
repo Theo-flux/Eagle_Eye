@@ -1,4 +1,4 @@
-import { Section, Aside, AnchorButton } from '../../shared';
+import { Section, Aside, AnchorButton, FourStars } from '../../shared';
 
 const Card = ({ item }) => {
   const { name, address, rating, uploaded, reviews } = item;
@@ -10,22 +10,22 @@ const Card = ({ item }) => {
       </div>
 
       <div className="px-4 py-2">
-        <div className="mb-3 flex justify-between items-start">
+        <div className="mb-6 flex justify-between items-start">
           <small className="">{uploaded}</small>
-          <div className="">
-            <div>{rating} </div>
+          <div className="flex flex-col items-end">
+            <div className="flex justify-between items-center mb-1">
+              <small className='mr-2'>{rating}</small> <FourStars />
+            </div>
             <p>{`${reviews} Reviews`}</p>
           </div>
         </div>
 
         <div className="w-[100%]">
-          <div className="flex justify-center items-center px-4 md:px-8">
-            <AnchorButton
-              href={'#'}
-              className={`bg-resblue`}
-              content={'Check Reviews'}
-            />
-          </div>
+          <AnchorButton
+            href={'#'}
+            className={`bg-resblue`}
+            content={'Check Reviews'}
+          />
         </div>
       </div>
     </div>

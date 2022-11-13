@@ -20,8 +20,8 @@ export function AnchorButton({ className, content, href }) {
   return (
     <a
       className={`
-                inline-block transition-all duration-700 ease-in-out mt-4
-                mb-8 py-1 text-sm text-white text-center rounded w-[100%]
+                inline-block transition-all duration-700 ease-in-out
+                py-1 text-sm text-white text-center rounded w-[100%]
                 ${className}
             `}
       href={`${href}`}

@@ -15,6 +15,7 @@ module.exports = {
       },
       west: '#FF8D0C',
       laurel: '#05A50A',
+      yellow: '#FF8D0C',
 
       nobel: '#B7B3B3',
       gray: '#00000029',
