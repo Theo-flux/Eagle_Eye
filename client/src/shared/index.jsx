@@ -1,5 +1,5 @@
-export { TH } from './table';
-export { Section, Div, Aside, Nav } from './containers';
-export { H1, H3, Text } from './texts';
-export { LinkButton, AnchorButton, Connect } from './button';
-export { Logo, LogoType } from './logo';
+export * from './table';
+export * from './containers';
+export * from './texts';
+export * from './button';
+export * from './logo';
