@@ -13,12 +13,12 @@ export const Div = ({ children, className }) => {
 };
 
 export const Aside = ({ children, className }) => {
-  return <aside className={`w-[95%] mx-auto ${className}`}>{children}</aside>;
+  return <aside className={`w-[90%] md:w-[98%] mx-auto ${className}`}>{children}</aside>;
 };
 
 export const Nav = ({ children, className }) => {
   return (
-    <div className={`w-[95%] mt-2 mx-auto max-w-8xl ${className}`}>
+    <div className={`w-[90%] mt-2 mx-auto max-w-8xl ${className}`}>
       {children}
     </div>
   );

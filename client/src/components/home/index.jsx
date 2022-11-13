@@ -16,7 +16,7 @@ const Card = ({ item }) => {
             <div className="flex justify-between items-center mb-1">
               <small className='mr-2'>{rating}</small> <FourStars />
             </div>
-            <p>{`${reviews} Reviews`}</p>
+            <small>{`${reviews} Reviews`}</small>
           </div>
         </div>
 
