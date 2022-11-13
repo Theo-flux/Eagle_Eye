@@ -35,7 +35,7 @@ const Card = ({ item }) => {
 function HomeContainer({ items }) {
   console.log(items);
   return (
-    <Section className={`h-screen overflow-hidden w-[100%] bg-gray`}>
+    <Section className={`w-[100%] bg-gray`}>
       <Aside>
         <div className="py-4">
           <div className="flex flex-wrap justify-between items-center">
