@@ -1,8 +1,8 @@
-import { Section, Aside, H3, SubTitle } from '../../shared';
+import { Section, Aside, H3, SubTitle, Button } from '../../shared';
 
 function VoteContainer() {
   return (
-    <Section className={`h-screen overflow-hidden w-[100%] bg-gray`}>
+    <Section className={`h-screen overflow-hidden w-[100%] bg-white`}>
       <Aside>
         <div className="py-4">
           <div className="border-gray border-b">
@@ -19,7 +19,7 @@ function VoteContainer() {
             />
           </div>
 
-          <div className="flex flex-col mt-3">
+          <div className="flex flex-col my-8">
             <div class="flex items-center mb-4">
               <input
                 disabled=""
@@ -53,6 +53,10 @@ function VoteContainer() {
               </label>
             </div>
           </div>
+
+
+          <Button className={`mr-4 bg-laurel`} content={'Submit'} />
+          {/* <Button className={`mr-4 bg-west`} content={'Connect'} /> */}
         </div>
       </Aside>
     </Section>

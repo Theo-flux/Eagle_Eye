@@ -1,4 +1,4 @@
-import { Logo, Section, Nav, Connect } from '../../shared';
+import { Logo, Section, Nav, Button } from '../../shared';
 import Search from '../search';
 
 function Navbar({ handleOpenSidebar, handleOpenModal }) {
@@ -14,7 +14,7 @@ function Navbar({ handleOpenSidebar, handleOpenModal }) {
             <div className={`hidden md:block mr-8`}>
               <Search />
             </div>
-            <Connect onClick={() => handleOpenModal()} content={'Connect'} />
+            <Button className={`bg-west`} onClick={() => handleOpenModal()} content={'Connect'} />
             <i
               onClick={() => handleOpenSidebar()}
               className={`md:hidden ml-8 text-2xl text-black ri-menu-add-line`}

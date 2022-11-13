@@ -3,3 +3,4 @@ export * from './containers';
 export * from './texts';
 export * from './button';
 export * from './logo';
+export * from './input';

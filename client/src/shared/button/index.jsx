@@ -32,14 +32,14 @@ export function AnchorButton({ className, content, href }) {
   );
 }
 
-export function Connect({ className, content, onClick }) {
+export function Button({ className, content, onClick }) {
   return (
     <button
       onClick={onClick}
       className={`
         inline-block transition-all duration-700 ease-in-out px-4 py-2 text-sm
         md:text-base md:px-8 md:py-2 text-white font-heading 
-        font-medium tracking-tighter text-center bg-west rounded-full
+        font-medium tracking-tighter text-center rounded
         ${className}
       `}
     >
