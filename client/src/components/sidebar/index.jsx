@@ -1,26 +1,33 @@
-import React from 'react';
+import { useRouter } from 'next/router';
+import Link from 'next/link';
 
 const sidebar_items = [
   {
     id: '1',
-    unactiveIcon: 'ri-home-line',
+    icon: 'ri-home-line',
     item: 'Home',
+    route: '/',
   },
 
   {
     id: '2',
-    unactiveIcon: 'ri-wallet-line',
+    icon: 'ri-wallet-line',
     item: 'Report & Earn',
+    route: '/report-earn',
   },
 
   {
     id: '3',
-    unactiveIcon: 'ri-arrow-up-circle-line',
+    icon: 'ri-arrow-up-circle-line',
     item: 'Vote',
+    route: '/vote',
   },
 ];
 
 function Sidebar({ openSidebar }) {
+  const router = useRouter();
+  // console.log(router)
+
   return (
     <div
       className={`
@@ -31,21 +38,29 @@ function Sidebar({ openSidebar }) {
     >
       <div className={`py-12`}>
         {sidebar_items.map((sidebar_item, index) => {
-          const { unactiveIcon, item } = sidebar_item;
+          const { icon, item, route } = sidebar_item;
           return (
-            <span
-              key={index}
-              className={`transition-all duration-300 ease-in-out cursor-pointer group hover:bg-resblue py-3 px-6 lg:px-12 mb-4 flex items-center`}
-            >
-              <i
-                className={`transition-all duration-300 ease-in-out text-xl mr-4 group-hover:text-white ${unactiveIcon}`}
-              ></i>
-              <p
-                className={`transition-all duration-300 ease-in-out group-hover:text-white`}
+            <Link key={index} href={`${route}`}>
+              <a
+                href={''}
+                className={`transition-all duration-300 ease-in-out cursor-pointer group ${
+                  router.route === route && 'bg-resblue'
+                } hover:bg-resblue py-3 px-6 lg:px-12 mb-4 flex items-center`}
               >
-                {item}
-              </p>
-            </span>
+                <i
+                  className={`transition-all duration-300 ease-in-out text-xl mr-4 ${
+                    router.route === route && 'text-white'
+                  } group-hover:text-white ${icon}`}
+                ></i>
+                <p
+                  className={`transition-all duration-300 ease-in-out ${
+                    router.route === route && 'text-white'
+                  } group-hover:text-white`}
+                >
+                  {item}
+                </p>
+              </a>
+            </Link>
           );
         })}
       </div>
