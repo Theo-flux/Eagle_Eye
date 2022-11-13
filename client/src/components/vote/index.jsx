@@ -15,37 +15,39 @@ function VoteContainer() {
           <div className="mt-8 border-gray border-b">
             <SubTitle
               className={`w-[100%]  max-w-[600px]`}
-              content={`Proposals strictly to strengthen security of the network`}
+              content={`Proposals are strictly to strengthen security of the network`}
             />
           </div>
 
           <div className="flex flex-col mt-3">
-            <div class="w-fit mb-2 flex items-center">
+            <div class="flex items-center mb-4">
               <input
-                id="bordered-checkbox-1"
+                disabled=""
+                id="disabled-radio-1"
                 type="checkbox"
                 value=""
-                name="bordered-checkbox"
-                className="w-6 h-6 text-laurel bg-white rounded"
+                name="disabled-radio"
+                className="w-4 h-4 text-resblue bg-white rounded-xl"
               />
               <label
-                for="bordered-checkbox-1"
-                class="py-2 ml-2 w-full text-sm font-medium text-gray-900 dark:text-gray-300"
+                for="disabled-radio-1"
+                class="ml-2 font-medium text-gray-400 dark:text-gray-500"
               >
                 Big bounty
               </label>
             </div>
-            <div class="w-fit flex items-center">
+            <div class="flex items-center">
               <input
-                id="bordered-checkbox-2"
+                disabled=""
+                id="disabled-radio-2"
                 type="checkbox"
                 value=""
-                name="bordered-checkbox-2"
-                className="w-6 h-6 text-blue-600 bg-gray-100 rounded"
+                name="disabled-radio"
+                className="w-4 h-4 text-resblue bg-white"
               />
               <label
-                for="bordered-checkbox-2"
-                class="py-2 ml-2 w-full text-sm font-medium text-gray-900"
+                for="disabled-radio-2"
+                class="ml-2 font-medium text-gray-400 dark:text-gray-500"
               >
                 File law suit
               </label>
